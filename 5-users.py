@@ -98,9 +98,8 @@ def run(addr, idx):
     for user in users:
         try:
             biao += 1
-            if idx == 10487:
-                if biao <= 1077:
-                    continue
+            if biao <= 58:
+                continue
             print(biao)
             url = "http://www.mafengwo.cn" + user.replace('\n', '')
             print(url)
@@ -119,9 +118,8 @@ def run(addr, idx):
             print(e)
             print(user)
         finally:
-            if idx == 10487:
-                if biao > 1077:
-                    time.sleep(random.randint(8, 15))
+            if biao <= 58:
+                pass
             else:
                 time.sleep(random.randint(8, 15))
     return True
@@ -129,7 +127,7 @@ def run(addr, idx):
 
 if __name__ == "__main__":
     # for i in mafeng_name_idx:
-    idx = 10487
+    idx = 19288
     addr = 'MaFeng'
     # idx = 10547
     # if idx in [10547, 10024]:
@@ -137,18 +135,18 @@ if __name__ == "__main__":
     print(idx)
     status = run(addr, idx)
 
-    if status:
-        idx = 11443
-        status = run(addr, idx)
-        if status:
-            idx = 10089
-            status = run(addr, idx)
-            if status:
-                idx = 10435
-                status = run(addr, idx)
-                if status:
-                    idx = 10140
-                    status = run(addr, idx)
-                    if status:
-                        idx = 19288
-                        status = run(addr, idx)
+    # if status:
+    #     idx = 11443
+    #     status = run(addr, idx)
+    #     if status:
+    #         idx = 10089
+    #         status = run(addr, idx)
+    #         if status:
+    #             idx = 10435
+    #             status = run(addr, idx)
+    #             if status:
+    #                 idx = 10140
+    #                 status = run(addr, idx)
+    #                 if status:
+    #                     idx = 19288
+    #                     status = run(addr, idx)

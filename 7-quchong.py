@@ -13,16 +13,16 @@ def csv_distinct(path):
 
 def run():
     addr = 'MaFeng'
-    try:
-        for i in mafeng_name_idx:
+    for i in mafeng_name_idx:
+        try:
             idx = i
             print(i)
             f1 = './{}/{}-{}-users_urls.csv'.format(addr, idx, mafeng_name_idx[idx])
             f2 = './{}/{}-{}-travels_urls.csv'.format(addr, idx, mafeng_name_idx[idx])
             csv_distinct(f1)
             csv_distinct(f2)
-    except Exception:
-        pass
+        except Exception:
+            continue
 
 
 if __name__ == "__main__":

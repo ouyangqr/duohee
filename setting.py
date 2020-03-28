@@ -1,3 +1,11 @@
+'''
+@Description:
+@version:
+@Author: XiaoYang
+@Date: 2020-03-18 13:33:03
+@LastEditors: XiaoYang
+@LastEditTime: 2020-04-21 10:48:14
+'''
 User_Agent_List = ['Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50',
                    'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50',
                    'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0;',
@@ -68,4 +76,23 @@ mafeng_name_idx = {
     10435: "同里",
     10140: "拈花湾",
     19288: "云水谣",
+}
+
+xiecheng_name_index = {
+    "xitang15": "西塘",  # https://you.ctrip.com/travels/xitang15/s2-p1.html
+    "fenghuang988": "凤凰",  # https://you.ctrip.com/travels/fenghuang988/s2-p1.html
+    "yangshuo702": "阳朔",
+    "lijiang32": "丽江",
+    "wuzhen508": "乌镇",
+    "pingyao365": "平遥",
+    "jingdezhen405": "景德镇",
+    "hongcun120496": "宏村",
+    "zhouzhuang81": "周庄",
+    "beijingwtown1446421": "古北水镇",
+    "dali31": "大理古城",
+    "xidi120557": "西递",
+    "nanxun80": "南浔",
+    "tongli95": "同里",
+    "lingshan120535": "拈花湾",
+    "najing2672": "云水谣",
 }
