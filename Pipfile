@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.douban.com/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+redis = "*"
+flask = "*"
+scrapy = "*"
+requests = "*"
+lxml = "*"
+js2py = "*"
+pyexecjs = "*"
+beautifulsoup4 = "*"
+fake-useragent = "*"
+jieba = "*"
+pandas = "*"
+
+[dev-packages]
+flake8 = "*"
+autopep8 = "*"
+
+[requires]
+python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
