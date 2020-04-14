@@ -138,5 +138,5 @@ class Travels():
 
 
 if __name__ == "__main__":
-    tieba = Travels("MaFeng", 10589, 0)
+    tieba = Travels("MaFeng", 19288, 0)
     tieba.run()

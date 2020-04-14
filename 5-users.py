@@ -94,9 +94,14 @@ def run(addr, idx):
     name = mafeng_name_idx[idx]
     users = open("./{}/{}-{}-users_urls.csv".format(addr, idx, name), 'r')
     fail_users = []
-
+    biao = 0
     for user in users:
         try:
+            biao += 1
+            if idx == 10487:
+                if biao <= 1077:
+                    continue
+            print(biao)
             url = "http://www.mafengwo.cn" + user.replace('\n', '')
             print(url)
             response = get_user_content(url)
@@ -114,13 +119,17 @@ def run(addr, idx):
             print(e)
             print(user)
         finally:
-            time.sleep(random.randint(8, 15))
+            if idx == 10487:
+                if biao > 1077:
+                    time.sleep(random.randint(8, 15))
+            else:
+                time.sleep(random.randint(8, 15))
     return True
 
 
 if __name__ == "__main__":
     # for i in mafeng_name_idx:
-    idx = 10589
+    idx = 10487
     addr = 'MaFeng'
     # idx = 10547
     # if idx in [10547, 10024]:
@@ -129,11 +138,17 @@ if __name__ == "__main__":
     status = run(addr, idx)
 
     if status:
-        idx = 10825
+        idx = 11443
         status = run(addr, idx)
         if status:
-            idx = 11729
+            idx = 10089
             status = run(addr, idx)
             if status:
-                idx = 186782
+                idx = 10435
                 status = run(addr, idx)
+                if status:
+                    idx = 10140
+                    status = run(addr, idx)
+                    if status:
+                        idx = 19288
+                        status = run(addr, idx)

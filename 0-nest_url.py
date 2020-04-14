@@ -75,4 +75,4 @@ def create_travels_users(addr, idx, min, max):
 
 
 if __name__ == "__main__":
-    create_travels_users('MaFeng', 186782, 1, 500)
+    create_travels_users('MaFeng', 19288, 1, 500)
