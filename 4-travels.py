@@ -29,7 +29,21 @@ class Travels():
             'Upgrade-Insecure-Requests': '1',
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
         }
-
+    def analysis_fun2(self， js_521):
+        """
+        与analysis_fun 解密不同的js混淆
+        """
+        js = js_521.replace('<script>', '').replace('</script>', '').replace('eval(', 'return (')
+        js = 'function demo () {' + js + "}"
+        result = js2py.eval_js(js)()
+        result = re.sub(r'setTimeout\(.*1500\);', '', result)
+        result = result.replace('document.cookie=', 'let a=')
+        result = re.sub(r'\};if\(\(function\(\).*\)}', '', result)
+        result += '; return a}'
+        res = js2py.eval_js(result)()
+        # print(res)
+        return res
+    
     def analysis_fun(self, js_521, url):
         """解析521的js"""
         # print(js_521)
